@@ -40,9 +40,11 @@ function RegistrationSuccessfully(props) {
                 </Col>
 
                 <Col span={24}>
-                  <h2 id="account-success">Account Created
-                      <br/>
-                  Successfully </h2>
+                  <h2 id="account-success">
+                    Account Created
+                    <br />
+                    Successfully{" "}
+                  </h2>
                 </Col>
                 <br />
                 <Col span={24}>
@@ -59,32 +61,6 @@ function RegistrationSuccessfully(props) {
                           </p>
                           <br />
                           <a id="link-not-send">Not received any email?</a>
-                          {/* {" "}
-                          <div>
-                            <Form.Item
-                              validateStatus={formData.passwordValidateStatus}
-                              help={formData.emailHelp}
-                            >
-                              <Input
-                                placeholder="new password"
-                                // className="inputStyle"
-                                name="newPassword"
-                                value={newPassword}
-                                onChange={e => handleChange(e)}
-                                prefix={
-                                  <Icon
-                                    type="mail"
-                                    style={{
-                                      color: "white",
-                                      fontWeight: "bold",
-                                      textIndent: "10px",
-                                      fontSize: "15px"
-                                    }}
-                                  />
-                                }
-                              />
-                            </Form.Item>
-                          </div> */}
                         </Col>
                         <br />
                         <br />
@@ -100,45 +76,7 @@ function RegistrationSuccessfully(props) {
                             Resend
                           </Button>
                         </Col>{" "}
-                        <br />
-                        <br />
-                        {/* <Col span={22}>
-                          <Button
-                            onClick={handleSubmit}
-                            id="handelButtonRegisterStyle"
-                            disabled={
-                              !formData.emailIsValid ||
-                              !formData.passwordIsValid
-                            }
-                          >
-                            Reset Password
-                          </Button>
-                        </Col> */}
-                        {/* <Col span={22}>
-                    <span className="handelCheckBoxes">
-              
-                      <Checkbox onChange={onChange} name="remember" value={remember} >Remember</Checkbox>
-
-                      <span onClick={togleAnimationFunc} >Forget password ?</span>
-                    </span>
-                  </Col> */}
-                        <br />
-                        {/* <Row> */}
-                        {/* <Col span={11}>
-                      <Button onClick={handleSubmit} id="handelButtonStyle" disabled={!formData.emailIsValid || !formData.passwordIsValid}>
-                        Login
-                    
-                      </Button>
-                    </Col>
-                    <Col span={11}>
-                      <Button
-                        onClick={() => props.history.push("/")}
-                        id="handelButtonRegisterStyle"
-                      >
-                        Register
-                      </Button>
-                    </Col> */}
-                        {/* </Row> */}
+                     
                       </Form>
                     </Row>
 
@@ -150,13 +88,12 @@ function RegistrationSuccessfully(props) {
           </Row>
         </div>
       </div>
-      {/* :
-    props.history.push("/home")} */}
+     
     </>
   );
 }
 
 const WrappedRegistrationForm = Form.create({ name: "register" })(
-    RegistrationSuccessfully
+  RegistrationSuccessfully
 );
 export default WrappedRegistrationForm;
